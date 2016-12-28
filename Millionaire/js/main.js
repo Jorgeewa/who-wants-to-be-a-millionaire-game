@@ -344,7 +344,7 @@ display.prototype.checkCorrect = function(e){
 }
 
 display.prototype.randomLevelQuestion = function(array){
-	return Math.ceil(((Math.random()*200)+1)%array.length);
+	return Math.floor((Math.random()*200)%array.length);
 
 }
 
