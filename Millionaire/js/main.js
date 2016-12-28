@@ -352,7 +352,7 @@ display.prototype.gameOver = function(prize){
 	var restartButton = document.querySelector(".restartButton");
 	var message = document.querySelectorAll("li")[0];
 	document.querySelector(".useOption").style.display = "none";
-	trophy.style.background = "url(file:///C:/Users/Jorgeewa/Desktop/whoWantsToBeAMillionaire/trophy.gif) no-repeat 0 0";
+	trophy.style.background = "url(pictures/trophy.gif) no-repeat 0 0";
 	trophy.style.backgroundSize = "100% 100%";
 	prize = prize.textContent;
 	console.log(prize);
