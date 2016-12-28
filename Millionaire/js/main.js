@@ -170,11 +170,9 @@ display.prototype.render = function(questionNumber){
 	questionD.style.display = "block";
 	if (questionNumber <= 4){
 		selectedQuestion = this.randomLevelQuestion(millionaireQuestions[0]);
-		console.log(selectedQuestion);
-		//console.log(this.noRandomRepeat);
-		this.noRandomRepeat.push(selectedQuestion);
 		if(!this.noRepeat(selectedQuestion))
 			selectedQuestion = this.randomLevelQuestion(millionaireQuestions[0]);
+		this.noRandomRepeat.push(selectedQuestion);
 		this.getQuestion(0,selectedQuestion);
 		questionView.innerHTML = this.question;
 		questionA.innerHTML = "A: " + this.optionA;
@@ -185,9 +183,9 @@ display.prototype.render = function(questionNumber){
 	
 	else if(questionNumber >4 && questionNumber <=9){
 		selectedQuestion = this.randomLevelQuestion(millionaireQuestions[1]);
-		this.noRandomRepeat.push(selectedQuestion);
 		if(!this.noRepeat(selectedQuestion))
 			selectedQuestion = this.randomLevelQuestion(millionaireQuestions[1]);
+		this.noRandomRepeat.push(selectedQuestion);
 		this.getQuestion(1,selectedQuestion);
 		questionView.innerHTML = this.question;
 		questionA.innerHTML = "A: " + this.optionA;
@@ -198,9 +196,9 @@ display.prototype.render = function(questionNumber){
 	
 	else{
 		selectedQuestion = this.randomLevelQuestion(millionaireQuestions[2]);
-		this.noRandomRepeat.push(selectedQuestion);
 		if(!this.noRepeat(selectedQuestion))
 			selectedQuestion = this.randomLevelQuestion(millionaireQuestions[2]);
+		this.noRandomRepeat.push(selectedQuestion);
 		this.getQuestion(2,selectedQuestion);
 		questionView.innerHTML = this.question;
 		questionA.innerHTML = "A: " + this.optionA;
@@ -403,11 +401,12 @@ display.prototype.restart = function(){
 }
 
 display.prototype.noRepeat = function(selectedQuestion){
+	var zero = true;
 	this.noRandomRepeat.forEach(function(arrayElement){
 		if (arrayElement == selectedQuestion)
-			return 0;
+			zero = false;
 	});
-	return 1;
+	return zero;
 }
 
 newDisplay = new display();
