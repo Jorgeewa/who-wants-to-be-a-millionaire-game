@@ -1,0 +1,290 @@
+
+.main-wrap{
+	margin: 0 auto;
+	border: 2px double black;
+	position: fixed;
+	height: 620px;
+	width: 800px;
+	left: 250px;
+	background: #05053B;
+	
+}
+.prize-wrapper {
+	margin-right: 23px;
+	margin-top: 10px;
+	width: 150px;
+	border: 2px double white;
+	background: repeating-linear-gradient(-45deg, #3535B0, #3535B0 5px, #1D1D80 5px, #1D1D80 10px);
+	position: relative;
+	animation: animate-bg 5s linear infinite;
+	float: right;
+}
+
+.blankAvatar {
+	width: 580px;
+	height: 260px;
+	border: 2px solid white;
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	background: url(file:///C:/Users/Jorgeewa/Desktop/whoWantsToBeAMillionaire/blankAvatar_1.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+	opacity: 0.2;	
+}
+
+.useOption {
+	width: 200px;
+	height: 90px;
+	border: 4px solid white;
+	top: 20px;
+	left: 150px;
+	background: black;
+	color: white;
+	text-align: center;
+}
+
+.lifeLines {
+	height: 35px;
+	width: 580px;
+	left: 20px;
+	position: absolute;
+	top: 320px;
+	border: 2px solid white;
+}
+
+.prize {
+	width: 100px;
+	height: 15px;
+	border: 2px solid black;
+	padding: 2px 0 2px 0;
+	border-radius: 20px;
+	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0, 15);
+	text-align: center;
+	line-height: -5px;
+	background: #11AFF2;
+	margin: 0 auto;
+}
+
+.prize-five {
+	height: 15px;
+	border: 2px solid black;
+	padding: 2px 0 2px 0;
+	border-radius: 20px;
+	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0, 15);
+	text-align: center;
+	line-height: -5px;
+	background: #F29011;
+	color: white;
+}
+
+.prize-fifteen {
+	height: 15px;
+	border: 2px solid black;
+	padding: 2px 0 2px 0;
+	border-radius: 20px;
+	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0, 15);
+	text-align: center;
+	line-height: -5px;
+	background: #F29011;
+	color: white;
+}
+
+.prize-ten {
+	height: 15px;
+	border: 2px solid black;
+	padding: 2px 0 2px 0;
+	border-radius: 20px;
+	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0, 15);
+	text-align: center;
+	line-height: -5px;
+	background: #F29011;
+	color: white;
+}
+
+.question-wrap {
+	border: 2px solid white;
+	width: 750px;
+	height: 230px;
+	top: 380px;
+	left: 25px;
+	position: relative;
+	background: repeating-linear-gradient(-45deg, #3535B0, #3535B0 5px, #1D1D80 5px, #1D1D80 10px);
+	animation: animate-bg 5s linear infinite;
+}
+
+.question-view{
+	border: 2px solid #DED3E6;
+	height: 100px;
+	width: 600px;
+	border-radius: 50px;
+	margin: 0 auto;
+	background: green;
+	opacity: 0.99;
+	margin-top: 5px;
+	text-align: center;
+	line-height: 150%;
+	text-indent: 50px;
+	color: white;
+	padding: 0;
+}
+
+.line{
+	border: 2px solid #DED3E6;
+	width: 745px;
+	position: fixed;
+	top: 445px;
+	opacity: 0.4;
+}
+
+.line.a{
+	border: 2px solid #DED3E6;
+	width: 745px;
+	position: fixed;
+	top: 535px;
+	opacity: 0.4;
+}
+
+.line.b{
+	border: 2px solid #DED3E6;
+	width: 745px;
+	position: fixed;
+	top: 590px;
+	opacity: 0.4;
+}
+
+.answer-wrap {
+	height: 110px;
+	width: 745px;
+	margin-top: 5px;
+	position: relative;
+}
+
+.answer-a {
+	position: absolute;
+	top: 5px;
+	left: 70px;
+	opaque: 0.99px;
+	border: 2px solid #158DCF;
+	border-radius: 50px;
+	width: 290px;
+	height: 45px;
+	background: #234E66;
+	cursor: pointer;
+	cursor: hand;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+}
+
+.answer-b {
+	position: absolute;
+	top: 5px;
+	left: 380px;
+	opaque: 0.99px;
+	border: 2px solid #E6641C;
+	border-radius: 50px;
+	width: 290px;
+	height: 45px;
+	background: #D99E7E;
+	cursor: pointer;
+	cursor: hand;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+}
+
+
+.answer-c {
+	position: absolute;
+	top: 60px;
+	left: 70px;
+	opaque: 0.99px;
+	border: 2px solid #C123DE;
+	border-radius: 50px;
+	width: 290px;
+	height: 45px;
+	background: #650E75;
+	cursor: pointer;
+	cursor: hand;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+}
+
+
+.answer-d {
+	position: absolute;
+	top: 60px;
+	left: 380px;
+	opaque: 0.99px;
+	border: 2px solid #0EB591;
+	border-radius: 50px;
+	width: 290px;
+	height: 45px;
+	background: #05755D;
+	cursor: pointer;
+	cursor: hand;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+}
+
+.restartButton {
+	color: white;
+	display: none;
+	width: 100px;
+	height: 30px;
+	border: 2px solid black;
+	padding: 0;
+	border-radius: 20px;
+	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0, 15);
+	background: #11AFF2;
+	position: absolute;
+	left: 250px;
+	top: 1px;
+	text-align: center;
+	line-height: 170%;
+	cursor: pointer;
+	cursor: hand;
+	
+}
+
+.options {
+	width: 50px;
+	height: 30px;
+	cursor: pointer;
+	cursor: hand;
+	display: inline-block;
+	margin-top: 3px;
+}
+
+img {
+	width: 40px;
+	height: 30px;
+	position: fixed;
+}
+.phoneAFriend{
+
+}
+
+.fifty-fifty {
+	
+}
+
+.walkAway {
+	
+}
+
+.askTheAudience {
+	
+}
+
+/*.50-50 img {
+	width: 42px;
+	height: 32px;
+}*/
+
+@keyframes animate-bg {
+				from {background-position: 0 0;}
+				to {background-position: -80px 0;}
+			}
