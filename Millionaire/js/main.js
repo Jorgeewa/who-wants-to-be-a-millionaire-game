@@ -171,7 +171,7 @@ display.prototype.render = function(questionNumber){
 	if (questionNumber <= 4){
 		selectedQuestion = this.randomLevelQuestion(millionaireQuestions[0]);
 		console.log(selectedQuestion);
-		console.log(this.noRandomRepeat);
+		//console.log(this.noRandomRepeat);
 		this.noRandomRepeat.push(selectedQuestion);
 		if(!this.noRepeat(selectedQuestion))
 			selectedQuestion = this.randomLevelQuestion(millionaireQuestions[0]);
