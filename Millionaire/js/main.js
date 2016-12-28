@@ -380,7 +380,7 @@ display.prototype.restart = function(){
 	document.querySelector(".useOption").style.display = "block";
 	var lastDiv = this.correctDiv;
 	var lastColor = this.lastColor;
-	trophy.style.background = "url(file:///C:/Users/Jorgeewa/Desktop/whoWantsToBeAMillionaire/blankAvatar_1.jpg) no-repeat 0 0";
+	trophy.style.background = "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/trophy.gif) no-repeat 0 0";
 	trophy.style.backgroundSize = "100% 100%";
 	newDisplay = new display();
 	newDisplay.render(0);
