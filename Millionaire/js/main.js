@@ -313,6 +313,9 @@ display.prototype.checkCorrect = function(e){
 	var prizeLevel = new prize(".wrapper", 300);
 	if (e.which == 1){
 		if(self.classNameStrings["." + e.target.className] == self.correct.toLowerCase()){
+			this.getResponse.onclick = function(){
+				return 0;
+			}
 			prizeLevel.animated("." + e.target.className, "win", 5);
 			if(self.questionNumber == 14)
 				self.gameOver(self.divNumbers[14]);
