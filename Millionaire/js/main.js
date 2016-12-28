@@ -352,7 +352,7 @@ display.prototype.gameOver = function(prize){
 	var restartButton = document.querySelector(".restartButton");
 	var message = document.querySelectorAll("li")[0];
 	document.querySelector(".useOption").style.display = "none";
-	trophy.style.background = "url(pictures/trophy.gif) no-repeat 0 0";
+	trophy.style.background = "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/trophy.gif) no-repeat 0 0";
 	trophy.style.backgroundSize = "100% 100%";
 	prize = prize.textContent;
 	console.log(prize);
@@ -380,7 +380,7 @@ display.prototype.restart = function(){
 	document.querySelector(".useOption").style.display = "block";
 	var lastDiv = this.correctDiv;
 	var lastColor = this.lastColor;
-	trophy.style.background = "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/trophy.gif) no-repeat 0 0";
+	trophy.style.background = "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/BlankAvatar_1.jpg) no-repeat 0 0";
 	trophy.style.backgroundSize = "100% 100%";
 	newDisplay = new display();
 	newDisplay.render(0);
