@@ -164,7 +164,7 @@ display.prototype.render = function(questionNumber){
 	var questionB = document.querySelector(".answer-b");
 	var questionC = document.querySelector(".answer-c");
 	var questionD = document.querySelector(".answer-d");
-	var function = recourseUntilNoRepeat = function(){
+	var recourseUntilNoRepeat = function(){
 		if(!this.noRepeat(selectedQuestion)){
 			selectedQuestion = this.randomLevelQuestion(millionaireQuestions[0]);
 		}
