@@ -107,7 +107,9 @@ this.optionC = 0;
 this.optionD = 0;
 this.correct = 0;
 this.questionNumber = 0;
-this.noRandomRepeat = [];
+this.noRandomRepeat1 = [];
+this.noRandomRepeat2 = [];
+this.noRandomRepeat3 = [];
 this.classNameStrings = {
 	".answer-a" : "a",
 	".answer-b" : "b",
@@ -179,7 +181,7 @@ display.prototype.render = function(questionNumber){
 	if (questionNumber <= 4){
 		selectedQuestion = this.randomLevelQuestion(millionaireQuestions[0]);
 		recourseUntilNoRepeat.call(this);
-		this.noRandomRepeat.push(selectedQuestion);
+		this.noRandomRepeat1.push(selectedQuestion);
 		this.getQuestion(0,selectedQuestion);
 		questionView.innerHTML = this.question;
 		questionA.innerHTML = "A: " + this.optionA;
@@ -191,7 +193,7 @@ display.prototype.render = function(questionNumber){
 	else if(questionNumber >4 && questionNumber <=9){
 		selectedQuestion = this.randomLevelQuestion(millionaireQuestions[1]);
 		recourseUntilNoRepeat.call(this);
-		this.noRandomRepeat.push(selectedQuestion);
+		this.noRandomRepeat2.push(selectedQuestion);
 		this.getQuestion(1,selectedQuestion);
 		questionView.innerHTML = this.question;
 		questionA.innerHTML = "A: " + this.optionA;
@@ -203,7 +205,7 @@ display.prototype.render = function(questionNumber){
 	else{
 		selectedQuestion = this.randomLevelQuestion(millionaireQuestions[2]);
 		recourseUntilNoRepeat.call(this);
-		this.noRandomRepeat.push(selectedQuestion);
+		this.noRandomRepeat3.push(selectedQuestion);
 		this.getQuestion(2,selectedQuestion);
 		questionView.innerHTML = this.question;
 		questionA.innerHTML = "A: " + this.optionA;
