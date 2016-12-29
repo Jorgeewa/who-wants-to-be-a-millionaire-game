@@ -324,12 +324,14 @@ display.prototype.checkCorrect = function(e){
 			prizeLevel.animated("." + e.target.className, "win", 5);
 			if(self.questionNumber == 14)
 				self.gameOver(self.divNumbers[14]);
-			self.questionNumber++;
-			prizeLevel.progress(self.divNumbers[self.questionNumber],self.divNumbers[self.questionNumber-1],self.questionNumber);
-			setTimeout(function(){
-				self.render(self.questionNumber)
-					
-			},2000);
+			else{
+				self.questionNumber++;
+				prizeLevel.progress(self.divNumbers[self.questionNumber],self.divNumbers[self.questionNumber-1],self.questionNumber);
+				setTimeout(function(){
+					self.render(self.questionNumber)
+
+				},2000);
+			}
 		}
 		else{
 			for(var correct in self.classNameStrings){
