@@ -10,7 +10,7 @@ prize.prototype.win = function(divName){
 prize.prototype.lose = function(divName){
 	var divName = document.querySelector(divName);
 	setTimeout(function(){
-		divName.style.background = "black";
+		divName.style.background = "red";
 	},1000);
 	var lastColor = document.defaultView.getComputedStyle(divName, null).getPropertyValue("background-color");
 }
@@ -23,7 +23,7 @@ prize.prototype.progress = function(divName,divNameReset,questionNumber){
 	if(arguments.length == 1){
 		setTimeout(function(){
 		divName.style.background = "rgb(17, 242, 32)";
-		},4000);	
+		},2000);	
 	}
 	else{
 		var divNameReset = document.querySelector(divNameReset); 
@@ -32,13 +32,13 @@ prize.prototype.progress = function(divName,divNameReset,questionNumber){
 			setTimeout(function(){
 				divNameReset.style.background = "rgb(242,144,17)";
 				divName.style.background = "rgb(17, 242, 32)";
-			}, 4000);
+			}, 2000);
 		}
 		else{
 			setTimeout(function(){
 				divNameReset.style.background = "rgb(17, 175, 242)";
 				divName.style.background = "rgb(17, 242, 32)";
-			}, 4000);
+			}, 2000);
 		}
 	}
 }
@@ -266,10 +266,11 @@ display.prototype.handleLifeLinesOnclick = function(e){
 		if (!this.counterAudience){
 		var possibleAnswer = (Math.floor(Math.random()*10))%4;
 		var printMessage = document.querySelector(".useOption");
-		printMessage.textContent = "";
+		printMessage.style.display = "block";
 		printMessage.textContent = "I would not trust a stranger but the audience think the right answer is: " + this.guessOptions[possibleAnswer];
 				setTimeout(function(){
 			printMessage.textContent = "";
+			printMessage.style.display = "none";
 		},10000);
 		this.counterAudience++;
 		}
@@ -279,10 +280,11 @@ display.prototype.handleLifeLinesOnclick = function(e){
 		if (!this.counterFriend){
 		var possibleAnswer = (Math.floor(Math.random()*10))%4;
 		var printMessage = document.querySelector(".useOption");
-		printMessage.textContent = "";
+		printMessage.style.display = "block";
 		printMessage.textContent = "Your friend reckons the correct answer is: " + this.guessOptions[possibleAnswer] ;
 				setTimeout(function(){
 			printMessage.textContent = "";
+			printMessage.style.display = "none";
 		},10000);
 		this.counterFriend++;
 		console.log(possibleAnswer, this.guessOptions);
@@ -387,7 +389,7 @@ display.prototype.restart = function(){
 	var trophy = document.querySelector(".blankAvatar");
 	var message = document.querySelectorAll("li")[0];
 	var restartButton = document.querySelector(".restartButton");
-	document.querySelector(".useOption").style.display = "block";
+	document.querySelector(".useOption").style.display = "none";
 	var lastDiv = this.correctDiv;
 	var lastColor = this.lastColor;
 	trophy.style.background = "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/BlankAvatar_1.jpg) no-repeat 0 0";
