@@ -267,7 +267,7 @@ display.prototype.handleLifeLinesOnclick = function(e){
 		var possibleAnswer = (Math.floor(Math.random()*10))%4;
 		var printMessage = document.querySelector(".useOption");
 		printMessage.style.display = "block";
-		printMessage.textContent = "I would not trust a stranger but the audience think the right answer is: " + this.guessOptions[possibleAnswer];
+		printMessage.textContent = "The audience think the right answer is: " + this.guessOptions[possibleAnswer];
 				setTimeout(function(){
 			printMessage.textContent = "";
 			printMessage.style.display = "none";
