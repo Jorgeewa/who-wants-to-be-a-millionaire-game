@@ -303,7 +303,7 @@ display.prototype.handleLifeLinesMouseover = function(e){
 		var element = "." + e.target.parentNode.className.split(" ")[1] + " img";
 	var element = document.querySelector(element);
 	element.style.width = "45px";
-	element.style.heigth = "35px";
+	element.style.height = "35px";
 }
 
 display.prototype.handleLifeLinesMouseout = function(e){
@@ -312,7 +312,7 @@ display.prototype.handleLifeLinesMouseout = function(e){
 	//console.log(element);
 	var element = document.querySelector(element);
 	element.style.width = "40px";
-	element.style.heigth = "30px";
+	element.style.height = "30px";
 }
 
 display.prototype.checkCorrect = function(e){
