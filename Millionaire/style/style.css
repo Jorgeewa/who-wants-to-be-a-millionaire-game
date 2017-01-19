@@ -12,7 +12,7 @@ body{
 .blankAvatar {
 	height: 486px;
 	border: 2px solid white;
-	background: url(http://ebookingcaminobarcelona.com/Millionaire/pictures/logo.jpg) no-repeat 0 0;
+	background: "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/BlankAvatar_1.jpg) no-repeat 0 0";
 	background-size: 100% 100%;
 	opacity: 0.9;
 }
