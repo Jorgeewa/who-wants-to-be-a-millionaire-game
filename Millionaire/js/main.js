@@ -235,6 +235,7 @@ display.prototype.handleEvents = function(e){
 display.prototype.handleLifeLinesOnclick = function(e){
 	var element = "." + e.target.parentNode.className.split(" ")[1] + " img";
 	var element = document.querySelector(element);
+	if(e.target.className !== "restartButton"){
 	element.style.opacity = "0.2";
 	if(e.target.parentNode.className.split(" ")[1] == "walkAway"){
 		self = this;
@@ -242,9 +243,8 @@ display.prototype.handleLifeLinesOnclick = function(e){
 			self.gameOver(self.divNumbers[self.questionNumber]);
 		},200);
 	}
-	
+
 	else if(e.target.parentNode.className.split(" ")[1] == "fifty-fifty"){
-		console.log(this.counter);
 		if (!this.counter){
 		for(var wrong in this.classNameStrings){
 			if(!(this.classNameStrings[wrong] == this.correct.toLowerCase())){
@@ -253,16 +253,14 @@ display.prototype.handleLifeLinesOnclick = function(e){
 			}
 		}
 		var pickAnInt = (Math.floor(Math.random()*10))%4;
-		console.log(pickAnInt);
 		this.eliminateCorrect.splice(pickAnInt,1);
 		document.querySelector(this.eliminateCorrect[0]).style.display = "none";
 		document.querySelector(this.eliminateCorrect[1]).style.display = "none";
 		this.counter++;
 		}
-		
+
 	}
 	else if(e.target.parentNode.className.split(" ")[1] == "askTheAudience"){
-		console.log(this.counterAudience);
 		if (!this.counterAudience){
 		var possibleAnswer = (Math.floor(Math.random()*10))%4;
 		var printMessage = document.querySelector(".useOption");
@@ -270,12 +268,12 @@ display.prototype.handleLifeLinesOnclick = function(e){
 		printMessage.textContent = "The audience think the right answer is: " + this.guessOptions[possibleAnswer];
 				setTimeout(function(){
 			printMessage.textContent = "";
-			printMessage.style.display = "none";
+            printMessage.style.display = "none";
 		},10000);
 		this.counterAudience++;
 		}
 	}
-	
+
 	else{
 		if (!this.counterFriend){
 		var possibleAnswer = (Math.floor(Math.random()*10))%4;
@@ -284,11 +282,11 @@ display.prototype.handleLifeLinesOnclick = function(e){
 		printMessage.textContent = "Your friend reckons the correct answer is: " + this.guessOptions[possibleAnswer] ;
 				setTimeout(function(){
 			printMessage.textContent = "";
-			printMessage.style.display = "none";
+            printMessage.style.display = "none";
 		},10000);
 		this.counterFriend++;
-		console.log(possibleAnswer, this.guessOptions);
 		}
+	}
 	}
 	/*this.lifeLinesFifty.onmouseover = function(){return 0;}
 	this.lifeLinesFifty.onmouseout = function(){return 0;}
@@ -303,7 +301,7 @@ display.prototype.handleLifeLinesMouseover = function(e){
 		var element = "." + e.target.parentNode.className.split(" ")[1] + " img";
 	var element = document.querySelector(element);
 	element.style.width = "45px";
-	element.style.height = "35px";
+	element.style.heigth = "35px";
 }
 
 display.prototype.handleLifeLinesMouseout = function(e){
@@ -312,35 +310,37 @@ display.prototype.handleLifeLinesMouseout = function(e){
 	//console.log(element);
 	var element = document.querySelector(element);
 	element.style.width = "40px";
-	element.style.height = "30px";
+	element.style.heigth = "30px";
 }
 
 display.prototype.checkCorrect = function(e){
 	var self = this;
 	var prizeLevel = new prize(".wrapper", 300);
 	if (e.which == 1){
-		if(self.classNameStrings["." + e.target.className] == self.correct.toLowerCase()){
-			this.getResponse.onclick = function(){
-				return 0;
-			}
-			prizeLevel.animated("." + e.target.className, "win", 5);
+		if(self.classNameStrings["." + e.target.className.split(" ")[0]] == self.correct.toLowerCase()){
+
+            this.getResponse.onclick = function(){
+		            return 0;
+	            }
+            //console.log(this.getResponse.onclick);
+            prizeLevel.animated("." + e.target.className.split(" ")[0], "win", 5);
 			if(self.questionNumber == 14)
 				self.gameOver(self.divNumbers[14]);
-			else{
-				self.questionNumber++;
-				prizeLevel.progress(self.divNumbers[self.questionNumber],self.divNumbers[self.questionNumber-1],self.questionNumber);
-				setTimeout(function(){
-					self.render(self.questionNumber)
+            else{
+            self.questionNumber++;
+			prizeLevel.progress(self.divNumbers[self.questionNumber],self.divNumbers[self.questionNumber-1],self.questionNumber);
+			setTimeout(function(){
+				self.render(self.questionNumber)
 
-				},2000);
-			}
+			},2000);
+            //this.getResponse.onclick = this.handleEvents.bind(this);
+            }
 		}
 		else{
 			for(var correct in self.classNameStrings){
 				if(self.classNameStrings[correct].toLowerCase() == self.correct.toLowerCase()){
 					this.correctDiv = document.querySelector(correct);
 					this.lastColor = document.defaultView.getComputedStyle(this.correctDiv, null).getPropertyValue("background-color");
-					console.log(this.correctDiv);
 					prizeLevel.lose(correct);
 					setTimeout(function(){
 						self.gameOver(self.divNumbers[self.questionNumber]);
@@ -353,7 +353,7 @@ display.prototype.checkCorrect = function(e){
 }
 
 display.prototype.randomLevelQuestion = function(array){
-	return Math.floor((Math.random()*200)%array.length);
+	return (Math.floor(Math.random()*10))%array.length;
 
 }
 
@@ -362,7 +362,7 @@ display.prototype.gameOver = function(prize){
 	var trophy = document.querySelector(".blankAvatar");
 	var prize = document.querySelector(prize);
 	var restartButton = document.querySelector(".restartButton");
-	var message = document.querySelectorAll("li")[0];
+	var message = document.querySelector(".message");
 	document.querySelector(".useOption").style.display = "none";
 	trophy.style.background = "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/trophy.gif) no-repeat 0 0";
 	trophy.style.backgroundSize = "100% 100%";
@@ -387,8 +387,8 @@ display.prototype.removeEvents = function(){
 
 display.prototype.restart = function(){
 	var trophy = document.querySelector(".blankAvatar");
-	var message = document.querySelectorAll("li")[0];
 	var restartButton = document.querySelector(".restartButton");
+	var message = document.querySelector(".message");
 	document.querySelector(".useOption").style.display = "none";
 	var lastDiv = this.correctDiv;
 	var lastColor = this.lastColor;
@@ -405,15 +405,18 @@ display.prototype.restart = function(){
 		lastDiv.style.background = lastColor;
 	var resetPic = document.querySelectorAll(".options img");
 	for(i=0; i<resetPic.length; i++){
+			console.log(resetPic[i])
 			resetPic[i].style.opacity = ".9"
 	}
 }
 
-display.prototype.noRepeat = function(selectedQuestion, questionIndex){
-	var zero = true;
-	this.noRandomRepeat[questionIndex].forEach(function(arrayElement){
-		if (arrayElement == selectedQuestion)
+display.prototype.noRepeat = function(selectedQuestion,questionIndex){
+    var zero = true;
+    this.noRandomRepeat[questionIndex].forEach(function(arrayElement){
+		if (arrayElement == selectedQuestion){
 			zero = false;
+            return zero;
+            }
 	});
 	return zero;
 }
