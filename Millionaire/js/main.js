@@ -353,7 +353,7 @@ display.prototype.checkCorrect = function(e){
 }
 
 display.prototype.randomLevelQuestion = function(array){
-	return (Math.floor(Math.random()*10))%array.length;
+	return (Math.floor(Math.random()*200))%array.length;
 
 }
 
