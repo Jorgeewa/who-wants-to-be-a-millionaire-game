@@ -1,16 +1,11 @@
 
 
 #tickerDiv {
-	position: relative;
-	width: 580px;
 	overflow: hidden;
 	border: 2px solid white;
 	height: 25px;
-	padding-left: 10px;
-	background:#113857;
-	float: left;
-	margin-top: 10px;
-	margin-left: 15px;
+	background:#05053B;
+	line-height: 1;
 }
 
 #tickerDiv-child {
