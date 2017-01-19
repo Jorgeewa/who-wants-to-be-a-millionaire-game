@@ -10,9 +10,9 @@ body{
 }
 
 .blankAvatar {
-	height: 486px;
+	height: 475px;
 	border: 2px solid white;
-	background: "url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/BlankAvatar_1.jpg) no-repeat 0 0";
+	background: url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/BlankAvatar_1.jpg) no-repeat 0 0;
 	background-size: 100% 100%;
 	opacity: 0.9;
 }
@@ -84,7 +84,7 @@ body{
 
 .question-wrap {
 	border: 2px solid white;
-	height: 230px;
+	height: 260px;
 
 	background: repeating-linear-gradient(-45deg, #3535B0, #3535B0 5px, #1D1D80 5px, #1D1D80 10px);
 	animation: animate-bg 5s linear infinite;
