@@ -1,66 +1,41 @@
 body{
-	background: black;
-	font-family: "Comic Sans";
+    background: black;
+    font-family: "Comic Sans";
 }
-.main-wrap{
-	margin: 0 auto;
-	border: 2px double black;
-	position: fixed;
-	height: 620px;
-	width: 800px;
-	left: 150px;
-	background: #05053B;
-	
-}
+
 .prize-wrapper {
-	margin-right: 23px;
-	margin-top: 10px;
-	width: 150px;
 	border: 2px double white;
 	background: repeating-linear-gradient(-45deg, #3535B0, #3535B0 5px, #1D1D80 5px, #1D1D80 10px);
-	position: relative;
 	animation: animate-bg 5s linear infinite;
-	float: right;
 }
 
 .blankAvatar {
-	width: 580px;
-	height: 260px;
+	height: 486px;
 	border: 2px solid white;
-	position: absolute;
-	top: 50px;
-	left: 20px;
-	background: url(https://jorgeewa.github.io/who-wants-to-be-a-millionaire-game/Millionaire/pictures/BlankAvatar_1.jpg) no-repeat 0 0;
+	background: url(http://ebookingcaminobarcelona.com/Millionaire/pictures/logo.jpg) no-repeat 0 0;
 	background-size: 100% 100%;
-	opacity: 0.2;	
+	opacity: 0.9;
 }
 
 .useOption {
-	width: 340px;
+
 	height: 250px;
-	border: 4px solid white;
-	position: relative;
-	top: 1px;
-	left: 130px;
+
+	border: 2px solid white;
 	background: black;
 	color: white;
 	text-align: center;
-	line-height: 1500%;
-	display: none;
+    line-height: 1500%;
+    display: none;
 }
 
 .lifeLines {
-	height: 35px;
-	width: 580px;
-	left: 20px;
-	position: absolute;
-	top: 320px;
 	border: 2px solid white;
+	position: relative;
 }
 
 .prize {
-	width: 100px;
-	height: 15px;
+	height: 15%;
 	border: 2px solid black;
 	padding: 2px 0 2px 0;
 	border-radius: 20px;
@@ -72,7 +47,7 @@ body{
 }
 
 .prize-five {
-	height: 15px;
+	height: 15%;
 	border: 2px solid black;
 	padding: 2px 0 2px 0;
 	border-radius: 20px;
@@ -84,7 +59,7 @@ body{
 }
 
 .prize-fifteen {
-	height: 15px;
+	height: 15%;
 	border: 2px solid black;
 	padding: 2px 0 2px 0;
 	border-radius: 20px;
@@ -96,7 +71,7 @@ body{
 }
 
 .prize-ten {
-	height: 15px;
+	height: 15%;
 	border: 2px solid black;
 	padding: 2px 0 2px 0;
 	border-radius: 20px;
@@ -109,11 +84,8 @@ body{
 
 .question-wrap {
 	border: 2px solid white;
-	width: 750px;
 	height: 230px;
-	top: 380px;
-	left: 25px;
-	position: relative;
+
 	background: repeating-linear-gradient(-45deg, #3535B0, #3535B0 5px, #1D1D80 5px, #1D1D80 10px);
 	animation: animate-bg 5s linear infinite;
 }
@@ -121,57 +93,46 @@ body{
 .question-view{
 	border: 2px solid #DED3E6;
 	height: 100px;
-	width: 600px;
 	border-radius: 50px;
 	margin: 0 auto;
-	background: #00004d;
+	background:  #00004d;
 	opacity: 0.99;
 	margin-top: 5px;
 	text-align: center;
-	line-height: 150%;
+	line-height: 4;
 	text-indent: 50px;
 	color: white;
 	padding: 0;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.line{
-	border: 2px solid #DED3E6;
-	width: 745px;
-	position: fixed;
-	top: 445px;
-	opacity: 0.4;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .line.a{
 	border: 2px solid #DED3E6;
-	width: 745px;
-	position: fixed;
-	top: 535px;
+	width: 100%;
+	position: absolute;
+	top: 26px;
 	opacity: 0.4;
 }
 
 .line.b{
 	border: 2px solid #DED3E6;
-	width: 745px;
-	position: fixed;
-	top: 590px;
+	width: 100%;
+	position: absolute;
+	top: 80px;
 	opacity: 0.4;
 }
 
 .answer-wrap {
 	height: 110px;
-	width: 745px;
+	width: 100%;
 	margin-top: 5px;
 	position: relative;
+
 }
 
 .answer-a {
-	position: absolute;
-	top: 5px;
-	left: 70px;
-	opaque: 0.99px;
+	opacity: 0.99;
 	border: 2px solid #DED3E6;
 	border-radius: 50px;
 	width: 290px;
@@ -182,14 +143,11 @@ body{
 	text-align: center;
 	line-height: 50px;
 	color: white;
-	font-size: 18px;
+    font-size: 18px;
 }
 
 .answer-b {
-	position: absolute;
-	top: 5px;
-	left: 380px;
-	opaque: 0.99px;
+	opacity: 0.99;
 	border: 2px solid #DED3E6;
 	border-radius: 50px;
 	width: 290px;
@@ -200,15 +158,12 @@ body{
 	text-align: center;
 	line-height: 50px;
 	color: white;
-	font-size: 18px;
+    font-size: 18px;
 }
 
 
 .answer-c {
-	position: absolute;
-	top: 60px;
-	left: 70px;
-	opaque: 0.99px;
+	opacity: 0.99;
 	border: 2px solid #DED3E6;
 	border-radius: 50px;
 	width: 290px;
@@ -219,15 +174,12 @@ body{
 	text-align: center;
 	line-height: 50px;
 	color: white;
-	font-size: 18px;
+    font-size: 18px;
 }
 
 
 .answer-d {
-	position: absolute;
-	top: 60px;
-	left: 380px;
-	opaque: 0.99px;
+	opacity: 0.99;
 	border: 2px solid #DED3E6;
 	border-radius: 50px;
 	width: 290px;
@@ -238,11 +190,11 @@ body{
 	text-align: center;
 	line-height: 50px;
 	color: white;
-	font-size: 18px;
+    font-size: 18px;
 }
 
 .restartButton {
-	color: white;
+	color: black;
 	display: none;
 	width: 100px;
 	height: 30px;
@@ -250,10 +202,10 @@ body{
 	padding: 0;
 	border-radius: 20px;
 	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0, 15);
-	background: #11AFF2;
+	background: #F29011;
 	position: absolute;
-	left: 250px;
-	top: 1px;
+	left: 45%;
+	top: 4px;
 	text-align: center;
 	line-height: 170%;
 	cursor: pointer;
@@ -267,13 +219,13 @@ body{
 	cursor: pointer;
 	cursor: hand;
 	display: inline-block;
-	margin-top: 3px;
+	margin-top: 4px;
 }
 
 img {
 	width: 40px;
 	height: 30px;
-	position: fixed;
+	position: absolute;
 }
 .phoneAFriend{
 
